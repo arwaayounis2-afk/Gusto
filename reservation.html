@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+<button class="add-btn"><i class="fa-solid fa-plus"></i> Add to
+    Order</button> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- /***********************************-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <title>reservation-gustoso</title>
+</head>
+
+<body>
+
+    <div id="root">
+        <div class="layout">
+
+            <header class="navbar">
+                <div class="header-container">
+
+                    <div class="logo">
+                        <h1>GUSOTO</h1>
+                    </div>
+                    <div class="links">
+                        <a href="index.html" class="nav-item">
+                            <span>home</span>
+                        </a>
+
+                        <a href="menu.html" class="nav-item">
+                            <span>menu</span>
+                        </a>
+
+                        </a>
+
+                        <a href="reservation.html" class="nav-item">
+                            <span>Reserve a Table</span>
+                        </a>
+                        <a href="index.html#about-us" class="nav-item">
+                            <span>About Gusoto</span>
+                        </a>
+
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                            <svg class="icon sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1V4H13V1H11ZM11 20V23H13V20H11ZM3.51472 4.92893L5.63604 7.05025L7.05025 5.63604L4.92893 3.51472L3.51472 4.92893ZM16.9497 18.364L19.0711 20.4853L20.4853 19.0711L18.364 16.9497L16.9497 18.364ZM19.0711 3.51472L16.9497 5.63604L18.364 7.05025L20.4853 4.92893L19.0711 3.51472ZM5.63604 16.9497L3.51472 19.0711L4.92893 20.4853L7.05025 18.364L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" />
+                            </svg>
+
+                            <svg class="icon moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M10 7C10 10.866 13.134 14 17 14C18.4584 14 19.8178 13.5552 20.9496 12.7938C20.4496 17.4338 16.5492 21 11.75 21C6.36522 21 2 16.6348 2 11.25C2 6.45076 5.56619 2.55042 10.2062 2.05044C9.44483 3.18224 9 4.54162 9 6C9 6.33777 9.02796 6.67137 9.08182 7.00004L10 7Z" />
+                            </svg>
+                        </button>
+
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- Main Reservation Content -->
+            <main class="reservation-page-wrapper">
+                <div class="reservation-container-layout">
+                    <!-- 1. The Booking Form Card -->
+                    <div class="res-header text-center">
+                        <span class="sub-badge">Table Booking</span>
+                        <h2>Reserve a Table</h2>
+                        <p>Secure your handcrafted Italian dining experience at Gusoto.</p>
+                    </div>
+
+                    <form class="reservation-form" id="bookingForm">
+                        <div class="form-grid">
+
+                            <!-- Full Name -->
+                            <div class="input-group">
+                                <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+                                <input type="text" id="name" placeholder="e.g. arwaa" required>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="input-group">
+                                <label for="phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+20 10 0000 0000" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="input-group">
+                                <label for="email"><i class="fa-solid fa-envelope"></i> Your Email</label>
+                                <input type="email" id="email" placeholder="arw@example.com" required>
+                            </div>
+
+                            <!-- Guests Number -->
+                            <div class="input-group">
+                                <label for="guests"><i class="fa-solid fa-users"></i> Number of Guests</label>
+                                <input type="number" id="guests" min="1" max="15" placeholder="e.g. 2 Persons" required>
+                            </div>
+
+                            <!-- Date -->
+                            <div class="input-group">
+                                <label for="resDate"><i class="fa-solid fa-calendar-days"></i> Reservation
+                                    Date</label>
+                                <input type="date" id="resDate" required>
+                            </div>
+
+                            <!-- Time -->
+                            <div class="input-group">
+                                <label for="resTime"><i class="fa-solid fa-clock"></i> Reservation Time</label>
+                                <select id="resTime" required>
+                                    <option value="" disabled selected>Select dining time</option>
+                                    <option value="13:00">01:00 PM (Lunch)</option>
+                                    <option value="15:00">03:00 PM (Late Lunch)</option>
+                                    <option value="18:00">06:00 PM (Sunset Dinner)</option>
+                                    <option value="20:00">08:00 PM (Prime Dinner)</option>
+                                    <option value="22:00">10:00 PM (Late Night)</option>
+                                </select>
+                            </div>
+
+                            <!-- Seating Area Preference -->
+                            <div class="input-group">
+                                <label for="seatingArea"><i class="fa-solid fa-chair"></i> Seating Area</label>
+                                <select id="seatingArea">
+                                    <option value="indoor">Indoor Hall (Cozy & Warm)</option>
+                                    <option value="terrace">Outdoor Terrace (Open Air)</option>
+                                    <option value="private">Private Dining Booth(Exclusive)</option>
+                                    <option value="private">Stone Oven View(Live Cooking)</option>
+                                    <option value="private">Family Table(Gatherings)</option>
+                                </select>
+                            </div>
+
+                            <!-- Special Occasion -->
+                            <div class="input-group">
+                                <label for="occasion"><i class="fa-solid fa-wine-glass"></i> Occasion</label>
+                                <select id="occasion">
+                                    <option value="casual">Casual Dining</option>
+                                    <option value="birthday">Birthday Celebration</option>
+                                    <option value="anniversary">Romantic Anniversary</option>
+                                    <option value="business">Business Meeting</option>
+                                </select>
+                            </div>
+
+                            <!-- Special Requests -->
+                            <div class="input-group full-width">
+                                <label for="notes"><i class="fa-solid fa-pen-to-square"></i> Special Requests /
+                                    Dietary
+                                    Notes</label>
+                                <textarea id="notes" rows="3"
+                                    placeholder="Let us know if you have food allergies or need special arrangements..."></textarea>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span>Confirm Reservation</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- 2. Helpful Quick Info Sidebar -->
+                <aside class="reservation-sidebar">
+                    <div class="info-widget-card">
+                        <h3><i class="fa-solid fa-bell-concierge"></i> Reservation Policy</h3>
+                        <ul>
+                            <li>Tables are held for up to <strong>15 minutes</strong> past the scheduled booking
+                                time.</li>
+                            <li>For gatherings exceeding 8 guests, please reach out via phone directly.</li>
+                            <li>Dress Code: Smart Casual.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-widget-card contact-widget">
+                        <h3><i class="fa-solid fa-circle-question"></i> Need Immediate Assistance?</h3>
+                        <p>Call our hosting desk directly for instant table inquiries:</p>
+                        <a href="tel:+201000000000" class="direct-call-btn">
+                            <i class="fa-solid fa-phone"></i> +20 100 000 0000
+                        </a>
+                    </div>
+                </aside>
+
+                <div class="modal-overlay" id="bookingSuccessModal">
+                    <div class="modal-box">
+                        <div class="modal-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3>Reservation Requested!</h3>
+                        <p>Thank you for choosing Gusoto. We have received your booking details and will send a
+                            confirmation
+                            SMS
+                            shortly.</p>
+                        <button type="button" class="modal-close-btn" id="modalCloseBtn">Done</button>
+                    </div>
+                </div>
+
+            </main>
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="footer-top">
+                    <div class="footer-col brand-col">
+                        <h3 class="footer-logo">GUSOTO</h3>
+                        <p class="footer-tagline">A warm table for you and your family. Fresh ingredients, stone-baked
+                            pizzas, and artisanal delights.</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Our Menu</a></li>
+                            <li><a href="search.html">Search Dishes</a></li>
+                            <li><a href="#about-us">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Opening Hours</h4>
+                        <p class="hours-text">Everyday</p>
+                        <span class="hours-time">10:00 AM – 12:00 AM</span>
+                        <p class="hours-text">Weekend Kitchen</p>
+                        <span class="hours-time">Until 1:00 AM</span>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Reservations</h4>
+                        <p class="contact-line"><i class="fa-solid fa-phone"></i> +20 100 000 0000</p>
+                        <p class="contact-line"><i class="fa-solid fa-envelope"></i> hello@gusoto.com</p>
+                        <a href="reservation.html" class="footer-reserve-btn">Reserve a Table</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="copy">
+                        © 2026 GUSOTO | All Rights Reserved
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+<button class="add-btn"><i class="fa-solid fa-plus"></i> Add to
+    Order</button> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- /***********************************-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <title>menu</title>
+</head>
+
+<header class="navbar">
+    <div class="header-container">
+
+        <div class="logo">
+            <h1>GUSOTO</h1>
+        </div>
+        <div class="links">
+            <a href="index.html" class="nav-item">
+                <span>home</span>
+            </a>
+
+            <a href="menu.html" class="nav-item">
+                <span>menu</span>
+            </a>
+
+            </a>
+            <a href="reservation.html" class="nav-item">
+                <span>Reserve a Table</span>
+            </a>
+            <a href="index.html#about-us" class="nav-item">
+                <span>About Gusoto</span>
+            </a>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <svg class="icon sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1V4H13V1H11ZM11 20V23H13V20H11ZM3.51472 4.92893L5.63604 7.05025L7.05025 5.63604L4.92893 3.51472L3.51472 4.92893ZM16.9497 18.364L19.0711 20.4853L20.4853 19.0711L18.364 16.9497L16.9497 18.364ZM19.0711 3.51472L16.9497 5.63604L18.364 7.05025L20.4853 4.92893L19.0711 3.51472ZM5.63604 16.9497L3.51472 19.0711L4.92893 20.4853L7.05025 18.364L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" />
+                </svg>
+
+                <svg class="icon moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M10 7C10 10.866 13.134 14 17 14C18.4584 14 19.8178 13.5552 20.9496 12.7938C20.4496 17.4338 16.5492 21 11.75 21C6.36522 21 2 16.6348 2 11.25C2 6.45076 5.56619 2.55042 10.2062 2.05044C9.44483 3.18224 9 4.54162 9 6C9 6.33777 9.02796 6.67137 9.08182 7.00004L10 7Z" />
+                </svg>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<body>
+    <section class="menu-section">
+        <div class="menu-container">
+            <div class="menu-header">
+                <span class="est-badge">Fresh & Handcrafted</span>
+                <h1 class="section-title">Our Delicious Menu</h1>
+            </div>
+
+            <nav class="nav-link">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-field-icon"></i>
+                    <input type="text" id="menuSearchInput"
+                        placeholder="Search by dish name or ingredient (e.g. Truffle, Pizza, Soufflé)..."
+                        autocomplete="off">
+                </div>
+                <div class="category-nav">
+                    <a href="#all" class="cat-link active">All</a>
+                    <a href="#pasta" class="cat-link">Pasta</a>
+                    <a href="#pizza" class="cat-link ">Pizza</a>
+                    <a href="#breakfast" class="cat-link">Breakfast</a>
+                    <a href="#dessert" class="cat-link">Dessert</a>
+                    <a href="#ice-cream" class="cat-link">Ice Cream</a>
+                    <a href="#drinks" class="cat-link">Drinks</a>
+                </div>
+            </nav>
+            <!-- no-results-msg -->
+            <div class="no-results-msg" id="noResultsBlock" style="display: none;">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>No Dishes Found</h3>
+                <p>We couldn't find anything matching your search. Try searching for something else!</p>
+            </div>
+
+            <!-- 1. Pizza -->
+            <div class="menu-category" id="pizza">
+                <div class="category-header">
+                    <h2 class="category-name">
+                        <span>Pizza</span>
+                        <i class="fa-solid fa-pizza-slice"></i>
+                    </h2>
+                </div>
+                <div class="category-content">
+                    <div class="items-grid">
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Bruschetta Rustica Pizza1.jpg" alt="Bruschetta Rustica Pizza">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">195 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Bruschetta Rustica Pizza</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Burrata & Pesto Pizza2.jpg" alt="Burrata & Pesto Pizza">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">245 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Burrata & Pesto Pizza</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Authentic Pizza Margherita.jpg" alt="Authentic Pizza Margherita">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">195 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Authentic Pizza Margherita</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/BBQ Chicken & Smoked Sausage.jpg"
+                                    alt="BBQ Chicken & Smoked Sausage">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">235 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">BBQ Chicken & Smoked Sausage</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Neapolitan Mozzarella & Olives.jpg"
+                                    alt="Neapolitan Mozzarella & Olives">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">205 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Neapolitan Mozzarella & Olives</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Roasted Tomato & Basil Pizza.jpg"
+                                    alt="Roasted Tomato & Basil Pizza">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">190 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Roasted Tomato & Basil Pizza</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Cheesy Pepperoni Feast.jpg" alt="Cheesy Pepperoni Feast">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">230 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Cheesy Pepperoni Feast</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Supreme Chicken & Mushroom Pizza3.jpg"
+                                    alt="Supreme Chicken & Mushroom Pizza">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">210 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Supreme Chicken & Mushroom Pizza</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Rustic Rosemary Cheese Pizza.jpg"
+                                    alt="Rustic Rosemary Cheese Pizza">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">195 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Rustic Rosemary Cheese Pizza</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Minced Beef & Green Peppers.jpg"
+                                    alt="Minced Beef & Green Peppers">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">225 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Minced Beef & Green Peppers</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Herb-Baked Tomato Delight.jpg" alt="Herb-Baked Tomato Delight">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">185 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Herb-Baked Tomato Delight</h3>
+                            </div>
+                        </div>
+
+                        <!-- 15. Mediterranean Veggie Supreme -->
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Mediterranean Veggie Supreme.jpg"
+                                    alt="Mediterranean Veggie Supreme">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">210 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Mediterranean Veggie Supreme</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Deluxe Pepperoni & Mushroom Feast.jpg"
+                                    alt="Deluxe Pepperoni & Mushroom Feast">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">255 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Deluxe Pepperoni & Mushroom Feast</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Quattro Formaggi (Four Cheese).jpg"
+                                    alt="Quattro Formaggi (Four Cheese)">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">220 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Quattro Formaggi (Four Cheese)</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pizza/Shaved Mushroom & Prosciutto.jpg"
+                                    alt="Shaved Mushroom & Prosciutto">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">245 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Shaved Mushroom & Prosciutto</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Pasta -->
+            <div class="menu-category" id="pasta">
+                <div class="category-header">
+                    <h2 class="category-name">
+                        <span>Pasta</span>
+                        <i class="fa-solid fa-utensils"></i>
+                    </h2>
+                </div>
+                <div class="category-content">
+                    <div class="items-grid">
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Rustic Cherry Tomato Spaghetti.jpg"
+                                    alt="Rustic Cherry Tomato Spaghetti">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">170 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Rustic Cherry Tomato Spaghetti</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Angel Hair Pomodoro Nest.jpg" alt="Angel Hair Pomodoro Nest">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">175 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Angel Hair Pomodoro Nest</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Creamy Rosé Penne.jpg" alt="Creamy Rosé Penne">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">190 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Creamy Rosé Penne</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Skillet Beef Tenderloin Tagliatelle.jpg"
+                                    alt="Skillet Beef Tenderloin Tagliatelle">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">260 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Skillet Beef Tenderloin Tagliatelle</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Penne Bolognese Ragu.jpg" alt="Penne Bolognese Ragu">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">195 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Penne Bolognese Ragu</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Creamy Chicken Alfredo Penne.jpg"
+                                    alt="Creamy Chicken Alfredo Penne">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">210 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Creamy Chicken Alfredo Penne</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Truffle Mushroom Fettuccine.jpg"
+                                    alt="Truffle Mushroom Fettuccine">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">230 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Truffle Mushroom Fettuccine</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Baked Macaroni Béchamel.jpg" alt="Baked Macaroni Béchamel">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">195 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Baked Macaroni Béchamel</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Creamy Garlic & Herb Tagliatelle.jpg"
+                                    alt="Creamy Garlic & Herb Tagliatelle">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">205 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Creamy Garlic & Herb Tagliatelle</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Classic Spaghetti Bolognese.jpg"
+                                    alt="Classic Spaghetti Bolognese">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">190 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Classic Spaghetti Bolognese</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Ultimate Baked Mac & Cheese.jpg"
+                                    alt="Ultimate Baked Mac & Cheese">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">185 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Ultimate Baked Mac & Cheese</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Seafood Marinara Linguine (Frutti di Mare).jpg"
+                                    alt="Seafood Marinara Linguine">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">275 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Seafood Marinara Linguine</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Handcrafted Cheese Ravioli.jpg" alt="Handcrafted Cheese Ravioli">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">220 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Handcrafted Cheese Ravioli</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/pasta/Four-Cheese Pasta Gratin.jpg" alt="Four-Cheese Pasta Gratin">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">210 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Four-Cheese Pasta Gratin</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Breakfast -->
+            <div class="menu-category" id="breakfast">
+                <div class="category-header">
+                    <h2 class="category-name">
+                        <span>Breakfast</span>
+                        <i class="fa-solid fa-utensils"></i>
+                    </h2>
+                </div>
+                <div class="category-content">
+                    <div class="items-grid">
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/breakfast/Garden Herb Cheese Omelette.jpg"
+                                    alt="Garden Herb Cheese Omelette">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">135 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Garden Herb Cheese Omelette</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/breakfast/Classic Continental Morning Plate.jpg"
+                                    alt="Classic Continental Morning Plate">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">145 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Classic Continental Morning Plate</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/breakfast/Royal Turkish Breakfast Board.jpg"
+                                    alt="Royal Turkish Breakfast Board">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">175 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Royal Turkish Breakfast Board</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/breakfast/Toasted Almond Croissant Trio.jpg"
+                                    alt="Toasted Almond Croissant Trio">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">85 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Toasted Almond Croissant Trio</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/breakfast/Almond & Chocolate Flaky Croissant.jpg"
+                                    alt="Almond & Chocolate Flaky Croissant">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">85 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Almond & Chocolate Flaky Croissant</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/breakfast/Roasted Hazelnut Choc Croissant.jpg"
+                                    alt="Roasted Hazelnut Choc Croissant">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">90 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Roasted Hazelnut Choc Croissant</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/breakfast/Dark Chocolate Flake Croissant.jpg"
+                                    alt="Dark Chocolate Flake Croissant">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">85 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Dark Chocolate Flake Croissant</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/breakfast/Berry Cream Stuffed Croissant.jpg"
+                                    alt="Berry Cream Stuffed Croissant">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">95 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Berry Cream Stuffed Croissant</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/breakfast/Vanilla Bean Custard Croissant.jpg"
+                                    alt="Vanilla Bean Custard Croissant">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">85 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Vanilla Bean Custard Croissant</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/breakfast/Fresh Bakery Morning Display.jpg"
+                                    alt="Fresh Bakery Morning Display">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">120 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Fresh Bakery Morning Display</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Dessert -->
+            <div class="menu-category" id="dessert">
+                <div class="category-header">
+                    <h2 class="category-name">
+                        <span>Dessert</span>
+                        <i class="fa-solid fa-utensils"></i>
+                    </h2>
+                </div>
+                <div class="category-content">
+                    <div class="items-grid">
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/Berry Velvet Cheesecake.jpg" alt="Berry Velvet Cheesecake">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">145 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Berry Velvet Cheesecake</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/Pistachio Chocolate Mochi Roll.jpg"
+                                    alt="Pistachio Chocolate Mochi Roll">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">160 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Pistachio Chocolate Mochi Roll</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/Strawberry Banana Pudding Bowl.jpg"
+                                    alt="Strawberry Banana Pudding Bowl">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">135 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Strawberry Banana Pudding Bowl</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/Royal Ashta Pistachio Kunafa.jpg"
+                                    alt="Royal Ashta Pistachio Kunafa">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">170 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Royal Ashta Pistachio Kunafa</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/Molten Chocolate Hazelnut Cake.jpg"
+                                    alt="Molten Chocolate Hazelnut Cake">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">155 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Molten Chocolate Hazelnut Cake</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/San Sebastian with Warm Ganache.jpg"
+                                    alt="San Sebastian with Warm Ganache">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">165 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">San Sebastian with Warm Ganache</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/Classic Chocolate Soufflé.jpg"
+                                    alt="Pistachio Basque Cheesecake">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">150 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Pistachio Basque Cheesecake</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/Turkish Gaziantep Pistachio Katmer.jpg"
+                                    alt="Turkish Gaziantep Pistachio Katmer">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">180 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Turkish Gaziantep Pistachio Katmer</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/Lotus Biscoff Baked Cheesecake.jpg"
+                                    alt="Lotus Biscoff Baked Cheesecake">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">140 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Lotus Biscoff Baked Cheesecake</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/Mango Peach Custard Trifle.jpg"
+                                    alt="Mango Peach Custard Trifle">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">130 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Mango Peach Custard Trifle</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Ice Cream -->
+            <div class="menu-category" id="ice-cream">
+                <div class="category-header">
+                    <h2 class="category-name">
+                        <span>Ice Cream</span> <i class="fa-solid fa-ice-cream"></i>
+                    </h2>
+                </div>
+                <div class="category-content">
+                    <div class="items-grid">
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/ice cream/Neapolitan Trio Sundae.jpg"
+                                    alt="Neapolitan Trio Sundae">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">85 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Neapolitan Trio Sundae</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/ice cream/Alphonso Mango Sorbet.jpg"
+                                    alt="Alphonso Mango Sorbet">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">80 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Alphonso Mango Sorbet</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/ice cream/Roasted Almond & Dried Fig Gelato.jpg"
+                                    alt="Roasted Almond & Dried Fig Gelato">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">95 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Roasted Almond & Dried Fig Gelato</h3>
+
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/ice cream/Lotus Biscoff & Brownie Cups.jpg"
+                                    alt="Lotus Biscoff & Brownie Cups">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">110 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Lotus Biscoff & Brownie Cups</h3>
+
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/ice cream/Warm Belgian Chocolate Pour Sundae.jpg"
+                                    alt="Warm Belgian Chocolate Pour Sundae">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">120 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Warm Belgian Chocolate Pour Sundae</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/desserts/ice cream/Artisanal Matcha & Cocoa Gelato Goble.jpg"
+                                    alt="Artisanal Matcha & Cocoa Gelato Goblet">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">95 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Artisanal Matcha & Cocoa Gelato Goblet</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Juice & Drinks -->
+            <div class="menu-category" id="drinks">
+                <div class="category-header">
+                    <h2 class="category-name">
+                        <span>Drinks</span> <i class="fa-solid fa-mug-hot"></i>
+                    </h2>
+                </div>
+                <div class="category-content">
+                    <div class="items-grid">
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Watermelon Mint Cooler.jpg" alt="Watermelon Mint Cooler">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">70 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Watermelon Mint Cooler</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Cold-Pressed Iced Orange.jpg" alt="Cold-Pressed Iced Orange">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">60 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Cold-Pressed Iced Orange</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Wild Raspberry Sparkler.jpg" alt="Wild Raspberry Sparkler">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">75 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Wild Raspberry Sparkler</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Frosted Mint Lemonade.jpg" alt="Frosted Mint Lemonade">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">65 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Frosted Mint Lemonade</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Pomegranate Citrus Slush.jpg" alt="Pomegranate Citrus Slush">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">75 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Pomegranate Citrus Slush</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Mixed Berry & Apple Smoothie.jpg"
+                                    alt="Mixed Berry & Apple Smoothie">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">80 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Mixed Berry & Apple Smoothie</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Strawberry Cream Frappuccino.jpg"
+                                    alt="Strawberry Cream Frappuccino">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">85 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Strawberry Cream Frappuccino</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Artisanal Roast Black Coffee.jpg"
+                                    alt="Artisanal Roast Black Coffee">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">55 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Artisanal Roast Black Coffee</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Cozy Hazelnut Hot Chocolate.jpg"
+                                    alt="Cozy Hazelnut Hot Chocolate">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">70 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Cozy Hazelnut Hot Chocolate</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Hot Chocolate with Marshmallows.jpg"
+                                    alt="Marshmallow Cocoa Delight">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">75 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Marshmallow Cocoa Delight</h3>
+                            </div>
+                        </div>
+
+                        <div class="food-card card-overlay">
+                            <div class="card-media">
+                                <img src="images/drinks/Marshmallow Cocoa Delight.jpg"
+                                    alt="Spiced Cinnamon Apple Cider">
+                                <div class="media-overlay"></div>
+                                <span class="price-tag">70 EGP</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="food-title">Spiced Cinnamon Apple Cider</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-col brand-col">
+                <h3 class="footer-logo">GUSOTO</h3>
+                <p class="footer-tagline">A warm table for you and your family. Fresh ingredients,
+                    stone-baked
+                    pizzas,
+                    and
+                    artisanal delights.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="search.html">Search Dishes</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Opening Hours</h4>
+                <p class="hours-text">Everyday</p>
+                <span class="hours-time">10:00 AM – 12:00 AM</span>
+                <p class="hours-text">Weekend Kitchen</p>
+                <span class="hours-time">Until 1:00 AM</span>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Reservations</h4>
+                <p class="contact-line"><i class="fa-solid fa-phone"></i> +20 100 000 0000</p>
+                <p class="contact-line"><i class="fa-solid fa-envelope"></i> hello@gusoto.com</p>
+                <a href="reservation.html" class="footer-reserve-btn">Reserve a Table</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copy">
+                © 2026 GUSOTO | All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
